@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --cor-fundo: #ffffff;
+    --cor-vermelho: #b22222;
+    --cor-amarelo: #ffbb00;
+    --cor-azul-claro: #4b8bdf;
+    --cor-texto: #333;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+  }
+  
+  header {
+    background: var(--cor-vermelho);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header .logo {
+    width: 100px;
+    height: auto;
+  }
+  
+  .menu-section {
+    background: var(--cor-azul-claro);
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0);
+    overflow: hidden;
+  }
+  
+  .menu-section summary {
+    padding: 15px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: var(--cor-amarelo);
+    color: var(--cor-texto);
+    position: relative;
+  }
+  
+  .menu-section summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .menu-section summary::after {
+    content: "▼";
+    position: absolute;
+    right: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .menu-section[open] summary::after {
+    transform: rotate(-180deg);
+  }
+  
+  .menu-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  .menu-section[open] .menu-content {
+    max-height: 1000px;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .menu-item img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+  
+  footer {
+    background: var(--cor-vermelho);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer .social img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+  }
+  
+  footer .social a:hover img {
+    transform: scale(1.1);
+  }
+  
+  h2{
+    margin-left: 1%;
+  }
+  
+  #video-promocional img{
+    margin-left: 25%;
+    width: 512px;
+    height: 341.5px;
+  }
+
+  #video-promocional img:hover{
+    transform: scale(1.11);
+    transition: transform 0.3s;
+  }
